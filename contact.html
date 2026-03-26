@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav-container">
+
+            <!-- Logo -->
+            <div class="logo"><a href="/"><img src="images/HealthSynch.png" alt=""></a></div>
+
+            <!-- Nav Links -->
+            <nav class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/#security">Security</a>
+                <a href="/#clinics">For Clinics</a>
+                <a href="contact.html">contact-us</a>
+            </nav>
+
+            <!-- Right Actions -->
+            <div class="nav-actions">
+                <a href="login.html" class="login"><i class="fa-solid fa-user"></i></a>
+                <a href="javascript:void(0)" class="btn" id="openDemo">Book Demo</a>
+            </div>
+
+            <!-- Hamburger -->
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+    </header>
+    <section class="contact">
+        <div class="contact-container">
+
+            <!-- LEFT INFO -->
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>
+                    Have questions or want a demo? Our team is here to help you streamline your clinic operations.
+                </p>
+
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>support@healthsynch.com</span>
+                </div>
+
+                <div class="info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 98765 43210</span>
+                </div>
+
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>New Delhi, India</span>
+                </div>
+            </div>
+
+            <!-- RIGHT FORM -->
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+
+                <form id="contactForm">
+                    <div class="form-row">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+
+                    <input type="text" placeholder="Subject">
+
+                    <textarea placeholder="Your Message" required></textarea>
+
+                    <button type="submit">Send Message</button>
+
+                    <!-- Success Message -->
+                    <div class="success-message" id="contactSuccess">
+                        ✅ Message sent successfully! We'll get back to you soon.
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Column 1 -->
+            <div class="footer-col">
+                <h4>Product</h4>
+                <a href="#features">Features</a>
+                <a href="#security">Security</a>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="contact.html">Contact</a>
+                <a href="#clinics">Clinics</a>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <a href="contact.html">Docs</a>
+                <a href="contact.html">Help Center</a>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="contact.html">Privacy Policy</a>
+                <a href="contact.html">Terms</a>
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+            © 2026 HealthSynch. All rights reserved.
+        </div>
+    </footer>
+    <div class="demo-overlay" id="demoOverlay"></div>
+
+    <!-- Side Popup -->
+    <div class="demo-popup" id="demoPopup">
+
+        <!-- Header -->
+        <div class="popup-header">
+            <h3>Book a Demo</h3>
+            <span id="closeDemo">&times;</span>
+        </div>
+
+        <!-- Form -->
+        <form class="demo-form" id="demoForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="text" placeholder="Clinic Name">
+
+            <select>
+                <option>Select Clinic Size</option>
+                <option>Small Clinic</option>
+                <option>Multi-doctor Clinic</option>
+                <option>Hospital</option>
+            </select>
+
+            <textarea placeholder="Your Message"></textarea>
+
+            <button type="submit">Request Demo</button>
+
+            <div class="success-message" id="successMsg">
+                ✅ request submitted successfully!
+            </div>
+        </form>
+
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggle = document.getElementById("menuToggle");
+            const nav = document.getElementById("navLinks");
+
+            toggle.addEventListener("click", () => {
+                nav.classList.toggle("active");
+                // overlay.classList.remove("active");
+            });
+            const openBtn = document.getElementById("openDemo");
+            const closeBtn = document.getElementById("closeDemo");
+            const popup = document.getElementById("demoPopup");
+            const overlay = document.getElementById("demoOverlay");
+
+            openBtn.addEventListener("click", (e) => {
+                e.preventDefault();
+                popup.classList.add("active");
+                overlay.classList.add("active");
+            });
+
+            const closePopup = () => {
+                popup.classList.remove("active");
+                overlay.classList.remove("active");
+            };
+
+            closeBtn.addEventListener("click", closePopup);
+            overlay.addEventListener("click", closePopup);
+
+            const form = document.getElementById("demoForm");
+            const successMsg = document.getElementById("successMsg");
+
+            form.addEventListener("submit", function (e) {
+                // alert('jsduhucid')
+                e.preventDefault();
+
+                // Show success message
+                successMsg.classList.add("active");
+
+                // Reset form
+                form.reset();
+
+                // Optional: auto close popup after 2 sec
+                setTimeout(() => {
+                    successMsg.classList.remove("active");
+                    document.getElementById("demoPopup").classList.remove("active");
+                    document.getElementById("demoOverlay").classList.remove("active");
+                }, 5000);
+            });
+
+            const contactform = document.getElementById("contactForm");
+            const contactmsg = document.getElementById("contactSuccess");
+
+            if (contactform) {
+                contactform.addEventListener("submit", function (e) {
+                    e.preventDefault();
+
+                    console.log("Contact form submitted ✅");
+
+                    // show success
+                    contactmsg.classList.add("active");
+
+                    // reset form
+                    contactform.reset();
+
+                    // hide after 3 sec
+                    setTimeout(() => {
+                        contactmsg.classList.remove("active");
+                    }, 3000);
+                });
+            }
+        });
+
+    </script>
+</body>
+
+</html>

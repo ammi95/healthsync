@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthSynch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav-container">
+
+            <!-- Logo -->
+            <div class="logo"><a href="/"><img src="images/HealthSynch.png" alt=""></a></div>
+
+            <!-- Nav Links -->
+            <nav class="nav-links" id="navLinks">
+                <a href="#features">Features</a>
+                <a href="#security">Security</a>
+                <a href="#clinics">For Clinics</a>
+                <a href="contact.html">Contact US</a>
+            </nav>
+
+            <!-- Right Actions -->
+            <div class="nav-actions">
+                <a href="login.html" class="login"><i class="fa-solid fa-user"></i></a>
+                <a href="javascript:void(0)" class="btn" id="openDemo">Book Demo</a>
+            </div>
+
+            <!-- Hamburger -->
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-overlay"></div>
+
+        <!-- Floating UI Cards -->
+        <div class="floating-card card-1">📅 Appointment: 10:30 AM</div>
+        <div class="floating-card card-2">🧾 Lab Report Ready</div>
+        <div class="floating-card card-3">🔔 Reminder Sent</div>
+
+        <div class="hero-content">
+
+            <span class="tagline">
+                HIPAA-ready • Secure • Real-time Care
+            </span>
+
+            <h1>
+                Unified Patient Records & Appointments — Built for Modern Clinics
+            </h1>
+
+            <p>
+                HealthSynch brings patients, doctors, and data together in one secure platform —
+                with seamless booking, real-time access, and enterprise-grade protection.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#" class="btn-secondary">Explore Platform</a>
+            </div>
+
+        </div>
+    </section>
+    <section class="trust-strip">
+        <div class="trust-container">
+
+            <p class="trust-text">
+                Trusted by modern clinics & healthcare providers
+            </p>
+
+            <div class="trust-items">
+                <span>🔐 HIPAA Ready</span>
+                <span>🛡️ End-to-End Encryption</span>
+                <span>⚡ 99.9% Uptime</span>
+                <span>👥 Role-Based Access</span>
+            </div>
+
+        </div>
+    </section>
+    <section class="features" id="features">
+        <div class="features-container">
+
+            <h2>Powerful Features for Modern Healthcare</h2>
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+                    <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Secure Patient Access</h3>
+                    <p>Patients securely log in to access their health records, reports, and messages anytime.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon"><i class="fa-solid fa-calendar-check"></i></div>
+                    <h3>Smart Appointment Booking</h3>
+                    <p>Real-time scheduling with doctor availability, automated reminders, and no overlaps.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon"><i class="fa-solid fa-user-doctor"></i></div>
+                    <h3>Doctor Dashboard</h3>
+                    <p>Unified dashboard with patient history, notes, alerts, and quick actions.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon"><i class="fa-solid fa-folder-open"></i></div>
+                    <h3>Document Management</h3>
+                    <p>Store and access prescriptions, lab reports, and scans in one place.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon"><i class="fa-solid fa-bell"></i></div>
+                    <h3>Smart Notifications</h3>
+                    <p>Automated reminders reduce missed appointments and improve engagement.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Audit & Compliance</h3>
+                    <p>Track every action with detailed logs and compliance-ready reporting.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="product-preview">
+        <div class="preview-container">
+
+            <h2>Explore HealthSynch in Action</h2>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab active" data-tab="portal">Patient Portal</button>
+                <button class="tab" data-tab="booking">Booking Flow</button>
+                <button class="tab" data-tab="dashboard">Doctor Dashboard</button>
+                <button class="tab" data-tab="audit">Audit Logs</button>
+            </div>
+
+            <!-- Content -->
+            <div class="tab-content active" id="portal">
+                <div class="preview-card">
+                    <div class="mock-ui">📋 Upcoming Appointment • Test Result • Messages</div>
+                    <p>Patients can view appointments, reports, and communicate securely in one place.</p>
+                </div>
+            </div>
+
+            <div class="tab-content" id="booking">
+                <div class="preview-card">
+                    <div class="mock-ui">📅 Calendar • Doctor List • Time Slots</div>
+                    <p>Seamless appointment booking with real-time availability and smart scheduling.</p>
+                </div>
+            </div>
+
+            <div class="tab-content" id="dashboard">
+                <div class="preview-card">
+                    <div class="mock-ui">🧑‍⚕️ Patient List • Alerts • Notes</div>
+                    <p>Doctors manage patients, access history, and add notes from one unified dashboard.</p>
+                </div>
+            </div>
+
+            <div class="tab-content" id="audit">
+                <div class="preview-card">
+                    <div class="mock-ui">📊 Logs • Filters • Export</div>
+                    <p>Track every action with detailed logs for compliance and transparency.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="security" id="security">
+        <div class="security-container">
+
+            <!-- Glow Icon -->
+            <div class="lock-icon">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <!-- Heading -->
+            <h2>Security You Can Trust</h2>
+
+            <!-- Points -->
+            <div class="security-points">
+                <span>OAuth2 & JWT Authentication</span>
+                <span>End-to-End Encryption</span>
+                <span>Data Encryption at Rest & Transit</span>
+                <span>Role-Based Access Control</span>
+                <span>Full Audit Trails</span>
+            </div>
+
+            <!-- Highlight -->
+            <p class="highlight">
+                Built to meet healthcare compliance standards from day one.
+            </p>
+
+        </div>
+    </section>
+    <section class="impact">
+        <div class="impact-container">
+
+            <h2>Real Impact for Modern Clinics</h2>
+
+            <div class="impact-grid">
+
+                <div class="impact-card">
+                    <h3 data-target="40">0</h3>
+                    <p>↓ No-shows</p>
+                </div>
+
+                <div class="impact-card">
+                    <h3 data-target="2">0</h3>
+                    <p>⚡ Faster Record Access</p>
+                </div>
+
+                <div class="impact-card">
+                    <h3 data-target="100">0</h3>
+                    <p>😊 Improved Patient Satisfaction</p>
+                </div>
+
+                <div class="impact-card">
+                    <h3>✔</h3>
+                    <p>🏥 Streamlined Clinic Operations</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="clinics" id="clinics">
+        <div class="clinics-container">
+
+            <h2>Designed for Every Type of Clinic</h2>
+
+            <div class="clinics-grid">
+
+                <!-- Small Clinics -->
+                <div class="clinic-card">
+                    <div class="icon"><i class="fa-solid fa-user-doctor"></i></div>
+                    <h3>Small Clinics</h3>
+                    <p>Simple appointment scheduling and secure patient management for individual practitioners.</p>
+                </div>
+
+                <!-- Multi Doctor -->
+                <div class="clinic-card">
+                    <div class="icon"><i class="fa-solid fa-users"></i></div>
+                    <h3>Multi-Doctor Clinics</h3>
+                    <p>Centralized patient records, collaboration tools, and efficient scheduling across teams.</p>
+                </div>
+
+                <!-- Hospitals -->
+                <div class="clinic-card">
+                    <div class="icon"><i class="fa-solid fa-hospital"></i></div>
+                    <h3>Hospitals</h3>
+                    <p>Scalable infrastructure with advanced security, audit logs, and enterprise-level control.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Column 1 -->
+            <div class="footer-col">
+                <h4>Product</h4>
+                <a href="#features">Features</a>
+                <a href="#security">Security</a>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="contact.html">Contact</a>
+                <a href="#clinics">Clinics</a>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <a href="contact.html">Docs</a>
+                <a href="contact.html">Help Center</a>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="contact.html">Privacy Policy</a>
+                <a href="contact.html">Terms</a>
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+            © 2026 HealthSynch. All rights reserved.
+        </div>
+    </footer>
+
+    <div class="demo-overlay" id="demoOverlay"></div>
+
+    <!-- Side Popup -->
+    <div class="demo-popup" id="demoPopup">
+
+        <!-- Header -->
+        <div class="popup-header">
+            <h3>Book a Demo</h3>
+            <span id="closeDemo">&times;</span>
+        </div>
+
+        <!-- Form -->
+        <form class="demo-form" id="demoForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="text" placeholder="Clinic Name">
+
+            <select>
+                <option>Select Clinic Size</option>
+                <option>Small Clinic</option>
+                <option>Multi-doctor Clinic</option>
+                <option>Hospital</option>
+            </select>
+
+            <textarea placeholder="Your Message"></textarea>
+
+            <button type="submit">Request Demo</button>
+
+            <div class="success-message" id="successMsg">
+                ✅ request submitted successfully!
+            </div>
+        </form>
+
+    </div>
+    <script>
+        const toggle = document.getElementById("menuToggle");
+        const nav = document.getElementById("navLinks");
+
+        toggle.addEventListener("click", () => {
+            nav.classList.toggle("active");
+            // overlay.classList.add("active");
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute("href"));
+                const offset = 100; // header height
+
+                const bodyRect = document.body.getBoundingClientRect().top;
+                const elementRect = target.getBoundingClientRect().top;
+                const elementPosition = elementRect - bodyRect;
+                const offsetPosition = elementPosition - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            });
+        });
+
+        const tabs = document.querySelectorAll(".tab");
+        const contents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+
+                tabs.forEach(t => t.classList.remove("active"));
+                contents.forEach(c => c.classList.remove("active"));
+
+                tab.classList.add("active");
+                document.getElementById(tab.dataset.tab).classList.add("active");
+            });
+        });
+
+        const counters = document.querySelectorAll(".impact-card h3[data-target]");
+
+        const animateCount = (el) => {
+            const target = +el.getAttribute("data-target");
+            let count = 0;
+            const speed = target / 50;
+
+            const update = () => {
+                count += speed;
+                if (count < target) {
+                    el.innerText = Math.floor(count);
+                    requestAnimationFrame(update);
+                } else {
+                    el.innerText = target;
+                }
+            };
+
+            update();
+        };
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCount(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        counters.forEach(counter => observer.observe(counter));
+
+        const openBtn = document.getElementById("openDemo");
+        const closeBtn = document.getElementById("closeDemo");
+        const popup = document.getElementById("demoPopup");
+        const overlay = document.getElementById("demoOverlay");
+
+        openBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            popup.classList.add("active");
+            overlay.classList.add("active");
+        });
+
+        const closePopup = () => {
+            popup.classList.remove("active");
+            overlay.classList.remove("active");
+        };
+
+        closeBtn.addEventListener("click", closePopup);
+        overlay.addEventListener("click", closePopup);
+
+        const form = document.getElementById("demoForm");
+        const successMsg = document.getElementById("successMsg");
+
+        form.addEventListener("submit", function (e) {
+            // alert('jsduhucid')
+            e.preventDefault();
+
+            // Show success message
+            successMsg.classList.add("active");
+
+            // Reset form
+            form.reset();
+
+            // Optional: auto close popup after 2 sec
+            setTimeout(() => {
+                successMsg.classList.remove("active");
+                document.getElementById("demoPopup").classList.remove("active");
+                document.getElementById("demoOverlay").classList.remove("active");
+            }, 5000);
+        });
+    </script>
+</body>
+
+</html>
