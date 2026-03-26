@@ -345,7 +345,16 @@
 
         toggle.addEventListener("click", () => {
             nav.classList.toggle("active");
-            // overlay.classList.add("active");
+
+        });
+        const navLinksItems = document.querySelectorAll(".nav-links a");
+        const navlink = document.getElementById("navLinks");
+
+        // Close menu on link click
+        navLinksItems.forEach(link => {
+            link.addEventListener("click", () => {
+                navlink.classList.remove("active");
+            });
         });
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener("click", function (e) {

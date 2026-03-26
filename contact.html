@@ -172,6 +172,15 @@
                 nav.classList.toggle("active");
                 // overlay.classList.remove("active");
             });
+            const navLinksItems = document.querySelectorAll(".nav-links a");
+            const navlink = document.getElementById("navLinks");
+
+            // Close menu on link click
+            navLinksItems.forEach(link => {
+                link.addEventListener("click", () => {
+                    navlink.classList.remove("active");
+                });
+            });
             const openBtn = document.getElementById("openDemo");
             const closeBtn = document.getElementById("closeDemo");
             const popup = document.getElementById("demoPopup");
